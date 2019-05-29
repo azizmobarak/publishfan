@@ -1,0 +1,240 @@
+﻿
+<!DOCTYPE html>
+<html>
+@{
+    ViewBag.Title = "Article";
+
+    System.Data.DataTable article = (System.Data.DataTable)ViewData["article"];
+    System.Data.DataTable comments = (System.Data.DataTable)ViewData["comments"];
+    publishfan.Models.publishedby p = new publishfan.Models.publishedby();
+
+    string articleid = "";
+
+    string title = article.Rows[0][0].ToString();
+    string imagearticle = article.Rows[0][1].ToString();
+    string text = article.Rows[0][2].ToString();
+
+    string userid = article.Rows[0][3].ToString();
+    articleid = article.Rows[0][4].ToString();
+
+    string publishername = p.publisher(userid);
+    string publisherimage = p.publisherimage(userid);
+
+    publishfan.Models.Reactions rr = new publishfan.Models.Reactions();
+    rr.updatereact();
+}
+<head>
+    <title>Aritcle-@title</title>
+<style>
+    #title {
+        position: absolute;
+        margin: 20px 100px 10px;
+        color: white;
+        font-size: 24px;
+    }
+    .divbartop {
+        position: absolute;
+        margin: -10px -10px 10px;
+        width: 1328px;
+        height: 70px;
+        background-color: #5D60AA;
+    }
+    #ulbarhome {
+        position: absolute;
+        margin: 15px 770px 10px;
+        list-style: none;
+        font-size: 33px;
+        width: 500px;
+    }
+  #ulbarhome li {
+            border-spacing: 6px;
+            float: left;
+            width: 120px;
+            height: 50px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+ .hometxt {
+        position: absolute;
+        margin: 6px 10px 10px;
+        font-size: 36px;
+        color: #D6D7E1;
+        text-decoration: none;
+    }
+
+  .logo {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
+        width: 60px;
+        height: 60px;
+    }
+    #ulbarhome li a {
+            color: #D6D7E1;
+            text-decoration: none;
+        }
+    .ad{
+        position:absolute;
+        margin:100px 20px 10px;
+        width:1300px;
+        height:120px;
+        
+    }
+    .userimage {
+        position:absolute;
+        margin:0px 10px 10px;
+        width:120px;
+        height:120px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+    .imgprofilecomment {
+        margin: 10px 10px 10px;
+        width: 60px;
+        height: 60px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+</style>
+   </head>
+<body>
+    <!--Div top -->
+    <div class="ad">
+       <img class="userimage" src="@publisherimage" />
+       <input style="position:absolute;margin:40px 150px 10px;background-color:white;color:blue;font-size:33px;border:none;font-style:normal" type="submit" value="@publishername" />
+       <label style="position:absolute;margin:30px 620px 10px;font-size:45px;width:600px;" >@title</label>
+    </div>
+    <hr style="position:absolute;color:gray;margin:220px 200px 10px;width:80%" />
+    <!--div image article-->
+    <div style="position:absolute;margin:250px 20px 10px;border:1px solid;width:400px;height:350px;">
+        <img src="@imagearticle" style="width:100%;height:100%" />
+    </div>
+    <!--div article text / comment-->
+    <div style="position:absolute;margin:270px 450px 10px;width:60%;height:50%">
+        <!--Article-->
+        <div style="margin:10px 0px 10px;width:100%;border:1px solid blue;">
+            <p style="margin:30px 10px 10px;width:90%;font-size:22px;">@text</p>
+        </div>
+        <div style="margin:10px 0px 2px;">
+            <table>
+                
+                <tr>
+                    <td>
+                        @using (Html.BeginForm("voteup", "publishfan"))
+                        {
+                            <input style="display:none" type="text" name="articleid" value="@articleid" />
+                            <input value="" type="submit" style="background-image:url('/images/up.png');background-size:100%;width:60px;height:60px;background-color:white;border:none" />
+                        }
+                    </td>
+                    <td>
+                        @using (Html.BeginForm("votedown", "publishfan"))
+                        {
+
+                            <input style="display:none" type="text" name="articleid" value="@articleid" />
+                            <input value="" type="submit" style="background-image:url('/images/down.png');background-size:100%;width:60px;height:60px;background-color:white;border:none" />
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    @{publishfan.Models.Reactions r = new publishfan.Models.Reactions(); }
+                    <td>
+                        <label style="font-size:26px;margin-left:20px">@r.getforarticle(int.Parse(articleid)).Rows[0][0].ToString()</label>
+                    </td>
+                    <td> <label style="font-size:26px;margin-left:20px">@r.getforarticle(int.Parse(articleid)).Rows[0][1].ToString()</label> </td>
+                </tr>
+            </table>
+
+        </div>
+        <!--comment zone-->
+        <div style="margin:20px -200px 2px;">
+            @using (Html.BeginForm("addcomment","publishfan"))
+            {
+            <input type="text" name="articleid" value="@articleid" style="display:none" />
+            <textarea name="acommenttext" placeholder="Comment" style="margin:0px 10px 10px;width:50%;height:80px;"></textarea>
+            <input type="submit" value="Comment" style="position:absolute;margin:20px 0px 2px;background-color:blue;font-size:22px;color:white;" />
+            }
+        </div>
+        <!--comment table-->
+        <div style="margin:-170px -200px 10px;width:113%;height:60%">
+            <table style="margin:160px 0px 10px;width:90%;">
+               @{ publishfan.Models.publishedby pim = new publishfan.Models.publishedby();}
+                @for (int i = 0; i < comments.Rows.Count; i++)
+                {
+                    <tr>
+                        <td style="background-color:wheat">
+                            <img src="@pim.publisherimage(comments.Rows[i][2].ToString())" class="imgprofilecomment" />
+                            @using (Html.BeginForm("getprofiles", "publishfan"))
+                            {
+                                <input name="userid" value="@comments.Rows[i][2].ToString()" style="display:none" />
+                                <input type="submit" value="@comments.Rows[i][0].ToString()" style="position:absolute;margin:-55px 80px 10px;font-size:22px;transform-style:flat ;width:150px;color:blue;border:none;background-color:wheat">
+                            }
+                            <p style="margin-left:120px;margin-top:-20px;width:70%;font-size:18px;">@comments.Rows[i][1].ToString()</p>
+                        </td>
+                    </tr>
+
+                    }
+            </table>
+        </div>
+    </div>
+    <!--div commentairs-->
+    
+
+
+    <!--Head for top bar -->
+    <header>
+        <div class="divbartop" style="position:fixed;width:103%">
+
+            <ul id="ulbarhome">
+                <li><a href="http://localhost:50097/publishfan/main">Home</a></li>
+                <li>
+                    @using (Html.BeginForm("Addnew", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Post" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("profile", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Profile" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("logout", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Logout" />
+                    }
+                </li>
+            </ul>
+
+            <a href="http://localhost:50097/publishfan/main" alt="Publish-Fan" class="hometxt"><img class="logo" src=" \images\tecnofanlogo.PNG" /></a>
+            <label id="title">@title</label>
+
+            @using (Html.BeginForm("filter", "publishfan"))
+            {
+                <input type="text" style="display:none" value="Categories" />
+                <input oninput="hideshowbuttonsearch()" id="searchzone" name="key_word" type="search" style="position:absolute;margin:20px 370px 10px;width:300px;height:35px;font-size:18px;" placeholder="  Search.." />
+                <input id="search" type="submit" value="" style="display:none;position:absolute;width:50px;height:35px;margin:20px 670px 10px;background-image:url(../../images/search.PNG);background-repeat:no-repeat;background-size:cover;border:none" />
+            }
+
+        </div>
+    </header>
+    <script type="text/javascript">
+         var btn = document.getElementById('search');
+        var zone = document.getElementById('searchzone');
+        function hideshowbuttonsearch() {
+            var a = zone.value;
+            if (a.length> 0) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

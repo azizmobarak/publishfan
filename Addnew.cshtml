@@ -1,0 +1,250 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish-Fan</title>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <title>New Post</title>
+
+    <style>
+        .divbartop {
+            position: absolute;
+            margin: -10px -10px 10px;
+            width: 101%;
+            height: 70px;
+            background-color: #5D60AA;
+        }
+
+        #ulbarhome {
+            position: absolute;
+            margin: 15px 770px 10px;
+            list-style: none;
+            font-size: 33px;
+            width: 500px;
+        }
+
+            #ulbarhome li a {
+                color: #D6D7E1;
+                text-decoration: none;
+            }
+
+        #ad {
+            position: absolute;
+            margin: 100px 120px 10px;
+            font-style: normal;
+            font-size: 38px;
+            border: 3px solid;
+            width: 1000px;
+            height: 150px;
+        }
+
+        .tab {
+            position: absolute;
+            margin: 330px 60px 10px;
+            border: 1px ridge;
+            font-size: 18px;
+        }
+
+        .tab2 {
+            position: absolute;
+            margin: 580px 60px 10px;
+            border: 1px ridge;
+            font-size: 18px;
+        }
+
+        #description {
+            width: 240px;
+            height: 30px;
+        }
+
+        #articletext {
+            position: absolute;
+            margin: 270px 600px 10px;
+            font-size: 18px;
+            font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        }
+
+        #post {
+            position: absolute;
+            margin: 700px 120px 10px;
+            width: 200px;
+            height: 40px;
+            font-size: 20px;
+            font-style: normal;
+            border: none;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is the header -->
+    <header>
+        <div class="divbartop">
+
+            <ul id="ulbarhome">
+                <li><a href="http://localhost:50097/publishfan/main">Home</a></li>
+                <li>
+                    @using (Html.BeginForm("Addnew", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Post" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("profile", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Profile" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("logout", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Logout" />
+                    }
+                </li>
+            </ul>
+
+            <a href="http://localhost:50097/publishfan/main" alt="Publish-Fan" class="hometxt"><img class="logo" src=" \images\tecnofanlogo.PNG" /></a>
+
+            @using (Html.BeginForm("filter", "publishfan"))
+            {
+                <input type="text" style="display:none" value="Categories" />
+                <input oninput="hideshowbuttonsearch()"  id="searchzone" name="key_word" type="search" style="position:absolute;margin:20px 150px 10px;width:500px;height:35px;font-size:18px;" placeholder="  Search.." />
+                <input  id="search" type="submit" value="" style="display:none;position:absolute;width:50px;height:35px;margin:20px 650px 10px;background-image:url(../../images/search.PNG);background-repeat:no-repeat;background-size:cover;border:none" />
+            }
+        </div>
+    </header>
+    <!-- This is the end of the header -->
+
+    <div style="margin:70px 200px 0px;position:absolute;transition:2s;background-image:url('/images/ad1.png');background-size:cover;background-repeat:no-repeat;width:1000px;height:180px;border:2px solid" id="tdad">
+
+    </div>
+    <label style="position:absolute;margin:270px 60px 10px;font-size:22px;color:red">@ViewBag.error</label>
+    <section>
+        @using (Html.BeginForm("addpost", "publishfan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <table class="tab">
+                <tr>
+                    <td>
+                        <label>Title : <font color="red" size="2">(max: 25,min:10 character)</font></label>
+                    </td>
+                    <td>
+                        <input id="title"  style="font-size:17px;" type="text" name="title" />
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>
+                        <label>Description : <font color="red" size="2">(max: 120,min: 40 character)</font></label>
+                    </td>
+                    <td>
+                        <textarea name="description" style="font-size:17px;height:100px" rows="3" cols="200" id="description"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Categorie : </label>
+                    </td>
+                    <td>
+                        <select name="categorie">
+                            <option>Select</option>
+                            <option>Economic</option>
+                            <option>Technology</option>
+                            <option>Science</option>
+                            <option>Nature</option>
+                            <option>Sport</option>
+                            <option>Fashion</option>
+                            <option>Accessoir</option>
+                            <option>Animales</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="tab2">
+                <tr>
+                    <td><label>Add Pictuer (png,jpg,jpge)</label> </td>
+                    <td>
+                        <input onclick="" name="filepath" type="file" id="fileinp" />
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+            <table id="articletext">
+                <tr>
+                    <td><label>Write something here!  <font color="red" size="2">(min 200 character)</font></label></td>s
+                </tr>
+                <tr>
+
+                    <td>
+                        <textarea name="text" style="width:700px;height:800px;font-size:18px;" placeholder="Create Your Article Here">
+        
+              </textarea>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" id="post" value="Publish" />
+        }
+
+    </section>
+
+
+    <script type="text/javascript">
+        var d = document.getElementById('tdad');
+        var t = 0;
+        function ad() {
+            if (t == 0) {
+
+                d.style.marginLeft = "700px;";
+            }
+            if (t == 1) {
+                d.style.marginLeft = "-700px;";
+                d.style.backgroundImage = "url('/images/ad1.png')";
+            }
+            if (t == 2) {
+                d.style.marginLeft = "700px;";
+            }
+            if (t == 3) {
+                d.style.marginLeft = "-700px;";
+                d.style.backgroundImage = "url('/images/ad2.png')";
+            }
+            if (t == 4) {
+                d.style.marginLeft = "700px;";
+            }
+            if (t == 5) {
+                d.style.marginLeft = "-700px;";
+                d.style.backgroundImage = "url('/images/ad3.png')";
+            }
+            t++;
+            if (t == 7) {
+                t = 0;
+            }
+        }
+        setInterval(ad, 3000);
+
+
+
+        //for search button 
+
+        var btn = document.getElementById('search');
+        var zone = document.getElementById('searchzone');
+        function hideshowbuttonsearch() {
+            var a = zone.value;
+            if (a.length> 0) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+       
+    </script>
+
+    
+</body>
+</html>

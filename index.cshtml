@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+    <title>
+        Publish-Fan Home
+    </title>
+    <link type="text/css" rel="stylesheet" href="~/css/index.css" />
+    <link type="text/css" rel="stylesheet" href="~/bootstrap/css/bootstrap-grid.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/bootstrap/css/bootstrap-grid.css" />
+    <link type="text/css" rel="stylesheet" href="~/bootstrap/css/bootstrap-grid.css.map" />
+    <link type="text/css" rel="stylesheet" href="~/bootstrap/css/bootstrap-grid.min.css.map" />
+    <link type="text/css" rel="stylesheet" href="~/bootstrap/css/bootstrap.css" />
+</head>
+<body style="background-color:#F6F2F2;margin:0px 0px 0px;width:100%;height:100%" onload="setInterval(incrementnumbers, 100);;setInterval(review, 6000), setInterval(showimagesfromleft, 3000), loadhr(), setInterval(mainslide, 3000), setInterval(hideloadhr, 11000), movepic(), setInterval(textshow, 2000), setInterval(incrementnumbers,1000)">
+    <div class="container">
+
+        
+        <div id="slide-div1" class="slide-div" style="margin-left:-120px;margin-top:5px;width:101%;">
+            <!--Row 1-->
+            <div class="row">
+                <img  class="img-responsive" style="transition:3s;width:101%;" src="~/Slider/slide1.PNG" id="slid1" />
+                <img class="img-responsive" style="transition:3s;width:101%;" src="~/Slider/slide2.PNG" id="slid2" />
+                <img class="img-responsive" style="transition:3s;width:101%;" src="~/Slider/slide3.PNG" id="slid3" />
+                <img class="img-responsive" style="transition:3s;width:101%;" src="~/Slider/slide4.PNG" id="slid4" />
+                <img class="img-responsive" style="transition:3s;width:101%;" src="~/Slider/slide5.PNG" id="slid5" />
+                <img class="img-responsive" style="transition:3s;width:101%;" src="~/Slider/slide6.PNG" id="slid6" />
+            </div>
+
+
+            <!--Row -->
+            <div >
+                <!--col-->
+                <h1 class="h1" style="margin-left:20px" id="txtslid1">Welcome, Publish-Fan is your home.</h1>
+                <!--col-->
+                <h1 class="h1" style="width:500px" id="txtslid2">Enjoy!!</h1>
+            </div>
+
+            <!--Row-->
+            
+            <div class="row" id="hr-div"></div>
+             
+            <!--Row-->
+            
+                <ul  class="row" >
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>FAQ</li>
+                </ul>
+            
+
+            <!--Row-->
+            <div class="row">
+                <a  href="http://localhost:50097/Account/Login" style="text-decoration:none ;position:absolute; margin:20px 1100px 10px; border-style: none; background-color: none; color: blue; font-size: 28px;font-family:Arial;font-style:normal;background-color:white;">Login</a>
+                <a  href="http://localhost:50097/Account/Register" style=" text-decoration:none ;position:absolute; margin:20px 1180px 10px; border-style: none; background-color: none; color: blue; font-size: 28px;font-family:Arial;font-style:normal;background-color:white;">Register</a>
+            </div>
+            
+
+        </div>
+
+        <!--Row 2-->
+        <div style="margin-left:-100px">
+            <img class="row" src="~/Design_img/change1.png" id="img-chang1" />
+            <p class="row" style=" margin: 440px 210px 10px;" id="txtchang1">00</p>
+
+            <!--col2-->
+
+            <img class="row" src="~/Design_img/change2.png" id="img-chang2" />
+            <p class="row" style="margin: 440px 610px 10px;" id="txtchang2">00</p>
+
+            <!--col3-->
+
+            <img class="row" src="~/Design_img/change3.png" id="img-chang3" />
+            <p class="row" style=" margin: 440px 1000px 10px;" id="txtchang3">00</p>
+        </div>
+
+        <!--Row 3-->
+        <div style="margin-left:-80px">
+            <!--col 1-->
+            <div class="row">
+                <img class="figure-img" id="ideasimg" style="position:absolute;margin:600px -500px 10px;transition:2s;" src="~/images/ideas.png" />
+            </div>
+            <div class="row">
+                <img class="figure-img" id="experienceimg" style="position:absolute;margin:600px -500px 10px;transition:2s;" src="~/images/experience.png" />
+            </div>
+            <!--col 2-->
+            <div  class="row">
+                <img class="figure-img" id="knowledgeimg" style="position:absolute;margin:600px -500px 10px;transition:2s;" src="~/images/knowledge.png" />
+            </div>
+            <div class="row">
+                <img class="figure-img" id="friendsimg" style="position:absolute;margin:600px -500px 10px;transition:2s;" src="~/images/meetfriends.png" />
+            </div>
+
+        </div>
+
+        <div id="divreviews" style="transition:4s;position:absolute;margin:960px 70px 10px;">
+            <!--Row 4-->
+            <div class="row">
+                <!--col-->
+                <img class="img-fluid" id="review1" style="width:800px;margin:2px 30px 10px;transition:2s;" src="~/images/review1.png" />
+            </div>
+            <!--Row 5-->
+            <div  class="row">
+                <!--col-->
+                <img class="img-fluid" id="review2" style="width:800px;margin:2px 30px 10px;transition:2s;" src="~/images/review2.png" />
+            </div>
+           
+            <!--Row 6-->
+            <div  class="row">
+                <!--col-->
+                <img class="img-fluid" id="review3" style="width:800px;margin:2px 30px 10px;transition:2s;" s src="~/images/review3.png" />
+            </div>
+        </div>
+        <!--Row 7-->
+        <div class="row" id="divabout" style="position:absolute;margin:1380px 10px 10px;">
+            <!--col-->
+            <img class="col" style="width:1000px;" src="~/images/aboutfaq.png" />
+        </div>
+
+      
+        <!--Row 8-->
+        <footer class="row" style="margin-left:-102px;width:101%">
+            <!--col-->
+            <div style="position:absolute;margin:1900px -10px 0px;width:100%;height:120px;background-color:darkblue;">
+                <ul style="position:absolute;list-style:none;font-size:18px;color:white;margin:30px 20px 10px;">
+                    <li>About</li>
+                    <li>History</li>
+                    <li>Why to choose us?</li>
+                </ul>
+                <ul style="position:absolute;list-style:none;font-size:18px;color:white;margin:30px 320px 10px;">
+                    <li>Goals</li>
+                    <li>Location</li>
+                    <li>Future</li>
+                </ul> 
+                <ul style="position:absolute;list-style:none;font-size:18px;color:white;margin:30px 520px 10px;">
+                    <li>Questions</li>
+                    <li>Report</li>
+                    <li>Publishfan</li>
+                </ul>
+                <label style="position:absolute;font-size:16px;color:white;margin:80px 1100px 0px;width:200px">All Right Reserved 2019</label>
+            </div>
+        </footer>
+
+    </div>
+    <script async src="~/javascript/index.js"></script>
+    <script async src="~/javascript/index2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+    <script type="text/javascript" async>
+
+        var h = 0;
+        var bar1 = document.getElementById("ideasimg");
+        var bar2 = document.getElementById("experienceimg");
+        var bar3 = document.getElementById("knowledgeimg");
+        var bar4 = document.getElementById("friendsimg");
+        function showimagesfromleft() {
+            if (h == 0) {
+                bar1.style.marginLeft = "50px";
+                bar2.style.marginLeft = "-500px";
+                bar3.style.marginLeft = "-500pxx";
+                bar4.style.marginLeft = "-500px";
+            }
+            if (h == 1) {
+                bar1.style.marginLeft = "50px";
+                bar2.style.marginLeft = "350px";
+                bar3.style.marginLeft = "-500px";
+                bar4.style.marginLeft = "-500px";
+            }
+            if (h == 2) {
+                bar1.style.marginLeft = "50px";
+                bar2.style.marginLeft = "350px";
+                bar3.style.marginLeft = "650px";
+                bar4.style.marginLeft = "-500px";
+            }
+            if (h == 3) {
+                bar1.style.marginLeft = "50px";
+                bar2.style.marginLeft = "350px";
+                bar3.style.marginLeft = "650px";
+                bar4.style.marginLeft = "950px";
+            }
+            if (h == 4) {
+                bar1.style.marginLeft = "650px";
+                bar2.style.marginLeft = "950px";
+                bar3.style.marginLeft = "50px";
+                bar4.style.marginLeft = "350px";
+            }
+            if (h == 5) {
+                bar1.style.marginLeft = "950px";
+                bar2.style.marginLeft = "50px";
+                bar3.style.marginLeft = "350px";
+                bar4.style.marginLeft = "650px";
+            }
+            if (h == 6) {
+                bar1.style.marginLeft = "50px";
+                bar2.style.marginLeft = "350px";
+                bar3.style.marginLeft = "650px";
+                bar4.style.marginLeft = "950px";
+            }
+
+            if (h == 7) {
+                bar1.style.marginLeft = "-500px";
+                bar2.style.marginLeft = "350px";
+                bar3.style.marginLeft = "650px";
+                bar4.style.marginLeft = "950px";
+
+            }
+            if (h == 8) {
+                bar1.style.marginLeft = "-500px";
+                bar2.style.marginLeft = "-500px";
+                bar3.style.marginLeft = "650px";
+                bar4.style.marginLeft = "950px";
+
+            }
+            if (h == 9) {
+                bar1.style.marginLeft = "-500px";
+                bar2.style.marginLeft = "-500px";
+                bar3.style.marginLeft = "-500px";
+                bar4.style.marginLeft = "950px";
+
+            }
+            if (h == 10) {
+                bar1.style.marginLeft = "-500px";
+                bar2.style.marginLeft = "-500px";
+                bar3.style.marginLeft = "-500px";
+                bar4.style.marginLeft = "-500px";
+
+            }
+            if (h == 11) {
+                h = -1;
+            }
+            h++;
+        }
+
+        //////show text in bar
+        ////text rection
+        //function textshow() {
+
+        //    if (j == 1) {
+        //        txt1.style.display = "block";
+        //        txt2.style.display = "none";
+        //        txt3.style.display = "none";
+        //        txt4.style.display = "none";
+        //        txt5.style.display = "none";
+        //        txt6.style.display = "none";
+
+        //    } if (j == 2) {
+        //        txt2.style.display = "block";
+        //        txt1.style.display = "block";
+        //        txt3.style.display = "none";
+        //        txt4.style.display = "none";
+        //        txt5.style.display = "none";
+        //        txt6.style.display = "none";
+        //    } if (j == 3) {
+        //        txt3.style.display = "block";
+        //        txt2.style.display = "block";
+        //        txt1.style.display = "block";
+        //        txt4.style.display = "none";
+        //        txt5.style.display = "none";
+        //        txt6.style.display = "none";
+        //    } if (j == 4) {
+        //        txt4.style.display = "block";
+        //        txt2.style.display = "block";
+        //        txt3.style.display = "block";
+        //        txt1.style.display = "block";
+        //        txt5.style.display = "none";
+        //        txt6.style.display = "none";
+        //    } if (j == 5) {
+        //        txt5.style.display = "block";
+        //        txt2.style.display = "block";
+        //        txt3.style.display = "block";
+        //        txt4.style.display = "block";
+        //        txt1.style.display = "block";
+        //        txt6.style.display = "none";
+        //    } if (j == 6) {
+        //        txt6.style.display = "block";
+        //        txt2.style.display = "block";
+        //        txt3.style.display = "block";
+        //        txt4.style.display = "block";
+        //        txt5.style.display = "block";
+        //        txt1.style.display = "block";
+        //    }
+        //    j++;
+        //    if (j == 8) {
+        //        j = 1;
+        //        txt1.style.display = "none";
+        //        txt2.style.display = "none";
+        //        txt3.style.display = "none";
+        //        txt4.style.display = "none";
+        //        txt5.style.display = "none";
+        //        txt6.style.display = "none";
+        //    }
+
+        //}
+
+    </script>
+    <script type="text/javascript">
+        //increment users's numbers
+        var n1 = document.getElementById('txtchang1');
+        var n2 = document.getElementById('txtchang2');
+        var n3 = document.getElementById('txtchang3');
+        var t = 1;
+
+        function incrementnumbers() {
+
+            var i = new Date().getSeconds();
+            t = t + i;
+
+            if (t < 200) {
+                n1.innerText = t.toString();
+            }
+            if (t < 800) {
+                n2.innerText = t.toString();
+
+            }
+            if (t < 2000) {
+                n3.innerText = t.toString();
+               
+            }
+
+        }
+
+    </script>
+
+    <script type="text/javascript" src="~/bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="~/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/bootstrap/js/bootstrap.min.js"></script>
+        
+</body>
+</html>
+
+
