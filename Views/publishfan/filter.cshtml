@@ -1,0 +1,265 @@
+﻿<!--Copy Right  Aziz Mobarak 2019-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <title>
+
+    </title>
+    <style>
+        .divbartop {
+            position: absolute;
+            margin: -10px -10px 10px;
+            width: 1328px;
+            height: 70px;
+            background-color: #5D60AA;
+        }
+
+        #ulbarhome {
+            position: absolute;
+            margin: 15px 770px 10px;
+            list-style: none;
+            font-size: 33px;
+            width: 500px;
+        }
+
+            #ulbarhome li {
+                border-spacing: 6px;
+                float: left;
+                width: 120px;
+                height: 50px;
+                line-height: 40px;
+                text-align: center;
+            }
+
+        .hometxt {
+            position: absolute;
+            margin: 6px 10px 10px;
+            font-size: 36px;
+            color: #D6D7E1;
+            text-decoration: none;
+        }
+
+        .logo {
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-right-radius: 50px;
+            width: 60px;
+            height: 60px;
+        }
+
+        #ulbarhome li a {
+            color: #D6D7E1;
+            text-decoration: none;
+        }
+
+        #tablemain {
+            position: absolute;
+            margin: 5px 100px 10px;
+            width: 700px;
+            height: 80%;
+        }
+
+            #tablemain tr td {
+                border: 1px solid black;
+                width: 30%;
+                height: 200px;
+            }
+
+        .h2_table {
+            position: absolute;
+            margin: -70px 200px 10px;
+            color: brown;
+            width: 150px;
+            font-size: 36px;
+        }
+
+        .p_table {
+            position: absolute;
+            margin: 3px 100px 5px;
+            width: 500px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This is the header -->
+    <header>
+        <div class="divbartop" style="width:101%;margin-top:-10px">
+
+            <ul id="ulbarhome">
+                <li><a href="http://localhost:50097/publishfan/main">Home</a></li>
+                <li>
+                    @using (Html.BeginForm("Addnew", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Post" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("profile", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Profile" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("logout", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Logout" />
+                    }
+                </li>
+            </ul>
+
+            <a href="http://localhost:50097/publishfan/main" alt="Publish-Fan" class="hometxt"><img class="logo" src=" \images\tecnofanlogo.PNG" /></a>
+
+            @using (Html.BeginForm("filter", "publishfan"))
+            {
+                <input oninput="hideshowbuttonsearch()" id="searchzone" name="key_word" type="search" style="position:absolute;margin:20px 150px 10px;width:500px;height:35px;font-size:18px;" placeholder="  Search.." />
+                <input id="search" type="submit" value="" style="display:none;position:absolute;width:50px;height:35px;margin:20px 650px 10px;background-image:url(../../images/search.PNG);background-repeat:no-repeat;background-size:cover;border:none" />
+            }
+
+        </div>
+    </header>
+    <!-- This is the end of the header -->
+    @* getting data from datatable using some voids  *@
+    @{ System.Data.DataTable dt = new System.Data.DataTable();
+        dt = (System.Data.DataTable)ViewData["filter"];
+        publishfan.Models.publishedby p = new publishfan.Models.publishedby();
+
+    }
+
+    <!-- This is the main page -->
+    <main>
+        <div style="margin-left:-40px;margin-top:80px" id="divmain">
+            <table id="tablemain">
+                @if (dt.Rows.Count == 1)
+                {
+                    <tr style="">
+                        <td style="background-image:url('@dt.Rows[0][2].ToString()');background-size:cover;background-repeat:no-repeat">
+
+
+                            @using (Html.BeginForm("Article", "publishfan"))
+                            {
+                                <input name="article" value="@dt.Rows[0][3]" type="text" style="position:absolute;display:none" />
+                                <input type="submit" name="article1" value="@dt.Rows[0][0]" style="position:absolute;margin:-130px 120px 10%;border:none;background-color:white;font-size:40px;" />
+                            }
+                            <label class="p_table" style="position:absolute;margin:-20px 180px 10px;width:350px;font-size:18px;background-color:wheat;">@dt.Rows[0][1]</label>
+                            <p style="margin:180px 2px 2px;position:absolute;font-size:20px;font-style:oblique;background-color:white;">Posted by @p.publisher(dt.Rows[0][4].ToString())</p>
+
+                    </tr>
+                }
+                else
+                {
+                    for (int j = 0; j < dt.Rows.Count; j += 1)
+                    {
+                        <tr style="">
+                            <td style="background-image:url('@dt.Rows[j][2].ToString()');background-size:cover;background-repeat:no-repeat">
+
+
+                                @using (Html.BeginForm("Article", "publishfan"))
+                                {
+                                    <input name="article" value="@dt.Rows[j][3]" type="text" style="position:absolute;display:none" />
+                                    <strong><input type="submit" name="article1" value="@dt.Rows[j][0]" style="position:absolute;margin:-60px 230px 10%;border:none;background-color:white;font-size:38px;" /></strong>
+                                }
+                                <label class="p_table" style="position:absolute;margin:5px 200px 10px;width:350px;font-size:18px;background-color:wheat;">@dt.Rows[j][1]</label>
+                                <p style="margin:80px 2px 2px;position:absolute;font-size:20px;font-style:oblique;background-color:white;">Posted by @p.publisher(dt.Rows[j][4].ToString())</p>
+
+                        </tr>
+
+                    }
+                }
+
+            </table>
+
+            <br />
+        </div>
+        <div style="position:fixed;margin:80px 800px 10px;border:1px solid;width:500px;height:550px;">
+            <label style="position:absolute;margin:10px 10px 10px;color:darkblue;"><strong>Search fr user only here</strong></label>
+            @using (Html.BeginForm("filteruser", "publishfan"))
+            {
+                <input oninput="hideshowbuttonsearchuser()" id="searchzoneuser" name="key_word" type="search" style="position:absolute;margin:10px 200px 10px;width:200px;height:35px;font-size:18px;" placeholder="  Search.." />
+                <input id="searchuser" type="submit" value="" style="display:none;position:absolute;width:50px;height:35px;margin:10px 400px 10px;background-image:url(../../images/search.PNG);background-repeat:no-repeat;background-size:cover;border:none" />
+            }
+
+            @{ System.Data.DataTable dttop5 = new System.Data.DataTable();
+                publishfan.Models.publishedby ptop5 = new publishfan.Models.publishedby();
+                publishfan.Models.filteruser fu = new publishfan.Models.filteruser();
+                bool users = true;
+                dttop5 = (System.Data.DataTable)ViewData["usersnums"];
+                try
+                {
+                    if (dttop5.Rows.Count == 0)
+                    {
+
+                    }
+                }
+                catch
+                {
+                    users = false;
+                }
+
+            }
+            @{ if (users == true)
+                {
+                    <div style="position:absolute;margin:60px 60px 10px;width:400px;height:180px;">
+                        <div style="">
+                            <div style="margin-top:-20px;width:400px;background-color:#720BE8;color:white;font-size:14px;"><h1 style="margin-left:150px;">Result</h1></div>
+                            <table style="margin-top:-20px;width:300px">
+                                @foreach (System.Data.DataRow dr in dttop5.Rows)
+                                {
+                                    <tr style="margin-top:30px;height:60px;">
+                                        <td>
+                                            <img style="margin:20px 0px 0px;border-bottom-left-radius:50px;border-bottom-right-radius:50px;border-top-right-radius:50px;border-top-left-radius:50px;width:60px;height:60px;" src="@ptop5.publisherimage(dr[0].ToString())" />
+                                        </td>
+                                        @using (Html.BeginForm("getprofiles", "publishfan"))
+                                        {
+                                            <td>
+
+                                                <input name="userid" value="@dr[0].ToString()" style="display:none" />
+                                                <input type="submit" value="@ptop5.publisher(dr[0].ToString())" style="margin:23px 0px 0px;width:170px;border:none;background-color:white;font-size:16px;">
+
+                                            </td>
+                                            <td>
+                                                <button type="submit" style="margin-left:60px;margin-top:20px;border:none;background-color:blue;color:white;font-size:20px;"><strong>Follow</strong></button>
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                    </div>}
+                else
+                {
+                    <label style="position:absolute;margin:200px 100px 0px;color:blue;font-size:30px;">Search users</label>
+                }
+            }
+        </div>
+    </main>
+    <!-- This is the end of nav left ba in the main page -->
+
+    <script type="text/javascript">
+        var btn = document.getElementById('search');
+        var zone = document.getElementById('searchzone');
+        var btnuser = document.getElementById('searchuser');
+        var zoneuser = document.getElementById('searchzoneuser');
+        function hideshowbuttonsearch() {
+            var a = zone.value;
+            if (a.length > 0) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+        function hideshowbuttonsearchuser() {
+            var a = zoneuser.value;
+            if (a.length > 0) {
+                btnuser.style.display = "block";
+            } else {
+                btnuser.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

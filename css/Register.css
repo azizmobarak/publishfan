@@ -1,0 +1,105 @@
+﻿body {
+}
+.titlepage {
+    position: absolute;
+    margin: 40px 390px 10px;
+    color: red;
+    font-size: 44px;
+    font-family: Arial;
+    width: 600px;
+}
+/*This is form*/
+.inp {
+    width: 240px;
+    height: 30px;
+    margin: 20px 100px 10px;
+}
+
+#register_form {
+    position: absolute;
+    margin: 150px 100px 10px;
+    background-color: skyblue;
+    opacity: .9;
+}
+
+#register_form2 {
+    position: absolute;
+    margin: 150px 620px 10px;
+    background-color: skyblue;
+    opacity: .9;
+}
+
+#ageselect {
+    width: 100px;
+    height: 20px;
+    margin: 20px 150px 10px;
+}
+
+#sex {
+    width: 100px;
+    height: 20px;
+    margin: 10px 150px 10px;
+}
+
+#btnregister {
+    position: absolute;
+    margin: 540px 190px 10px;
+    width: 200px;
+    height: 30px;
+    font-size: 24px;
+    font-family: Algerian;
+}
+
+#tags {
+    position: absolute;
+    margin: 480px 60px 10px;
+    font-size: 24px;
+    border: 2px dotted white;
+    width: 300px;
+    height: 60px;
+}
+
+#interests {
+    position: absolute;
+    margin: 440px 620px 10px;
+    width: 450px;
+    border: 2px solid white;
+    border-spacing: 3px;
+}
+
+    #interests tr td {
+        height: 50px;
+        text-align: center;
+        color: white;
+        font-size: 22px;
+        border: 2px solid white;
+    }
+
+        #interests tr td:hover {
+            color: darkslateblue;
+            font-size: 23px;
+            cursor: default;
+        }
+
+.confirm {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 0px 20px 10px;
+    border-bottom-left-radius: 60px;
+    border-bottom-Right-radius: 60px;
+    border-Top-Right-radius: 60px;
+    border-Top-Left-radius: 60px;
+    display: none;
+}
+
+/*This is start of login panel*/
+
+#tablogin {
+    position: absolute;
+    margin: 200px 200px 10px;
+    background-color: skyblue;
+    opacity: .7;
+}
+
+

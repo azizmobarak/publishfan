@@ -1,0 +1,186 @@
+﻿.slide-div {
+    position: absolute;
+    margin: -10px -10px 10px;
+    width: 100%;
+    height: 45%;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+#video {
+    position: absolute;
+    margin: -10px -10px 10px;
+    width: 100%;
+    height: 45%;
+}
+
+#hr-div {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -10px;
+    background-color: red;
+    height: 20px;
+    width: 40px;
+    transition: 10s;
+}
+
+.slide-div ul {
+    position: absolute;
+    margin: 30px 20px 10px;
+    list-style: none;
+    width: 700px;
+    height: 30px;
+}
+
+    .slide-div ul li {
+        float: left;
+        color: white;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        width: 120px;
+    }
+
+#slid3, #slid2, #slid4, #slid5, #slid6 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    transition: 4s;
+}
+
+#slid1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("/Slider/slide1.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#txtslid1 {
+    position: absolute;
+    margin: 200px 70px 20px;
+    font-size: 40px;
+    color: white;
+}
+
+#txtslid2 {
+    position: absolute;
+    margin: 200px 730px 20px;
+    font-size: 40px;
+    color: white;
+    width: 400px;
+}
+
+#top-table {
+    position: absolute;
+    margin: 20px 800px 10px;
+    color: brown;
+    font-size: 40px;
+    border-spacing: 20px;
+}
+
+#img-chang1 {
+    position: absolute;
+    margin: 500px 100px 30px;
+    width: 20%;
+    height: 40%;
+    transition: 3s;
+}
+
+#img-chang2 {
+    position: absolute;
+    margin: 500px 500px 30px;
+    width: 20%;
+    height: 40%;
+    transition: 3s;
+}
+
+#img-chang3 {
+    position: absolute;
+    margin: 500px 900px 30px;
+    width: 20%;
+    height: 40%;
+    transition: 3s;
+}
+
+#txtchang1 {
+    position: absolute;
+    margin: 440px 200px 10px;
+    color: blue;
+    font-size: 30px;
+}
+
+#txtchang2 {
+    position: absolute;
+    margin: 440px 600px 10px;
+    color: green;
+    font-size: 30px;
+}
+
+#txtchang3 {
+    position: absolute;
+    margin: 440px 1000px 10px;
+    color: red;
+    font-size: 30px;
+}
+
+
+#center-div {
+    position: absolute;
+    margin: 700px 70px 10px;
+    width: 80%;
+    background-color: #110D87;
+}
+
+#txt1 {
+    position: absolute;
+    margin: -60px 30px 10px;
+    font-size: 40px;
+    color: red;
+    transition: 4s;
+    text-decoration: solid;
+}
+
+#txt2 {
+    position: absolute;
+    margin: -60px 150px 10px;
+    font-size: 40px;
+    color: red;
+    transition: 4s;
+}
+
+#txt3 {
+    position: absolute;
+    margin: -60px 340px 10px;
+    font-size: 40px;
+    color: red;
+    transition: 4s;
+}
+
+#txt4 {
+    position: absolute;
+    margin: -60px 540px 10px;
+    font-size: 40px;
+    color: red;
+    transition: 4s;
+}
+
+#txt5 {
+    position: absolute;
+    margin: -60px 740px 10px;
+    font-size: 40px;
+    color: red;
+    transition: 4s;
+}
+
+#txt6 {
+    position: absolute;
+    margin: -60px 860px 10px;
+    font-size: 40px;
+    color: red;
+    transition: 4s;
+}

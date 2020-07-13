@@ -1,0 +1,119 @@
+﻿<!--Copy Right  Aziz Mobarak 2019-->
+
+@{
+    System.Data.DataTable dt = (System.Data.DataTable)ViewData["user"];
+
+    string name = dt.Rows[0][0].ToString();
+    string lastname = dt.Rows[0][1].ToString();
+    string email = dt.Rows[0][2].ToString();
+    string tele = dt.Rows[0][3].ToString();
+    string pass = dt.Rows[0][4].ToString();
+    string city = dt.Rows[0][5].ToString();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edite</title>
+    <style>
+        .divorg {
+            margin: 150px 200px 30px;
+            width: 900px;
+            height: 500px;
+        }
+
+            .divorg label {
+                font-size: 22px;
+                margin-left: 10px;
+            }
+
+            .divorg input {
+                font-size: 18px;
+                width: 300px;
+                height: 40px;
+            }
+    </style>
+</head>
+<body>
+    <h1 style="margin:20px 500px 10px;color:blue;font-size:28px;"><strong> Update your information </strong></h1>
+    <h1 style="margin:40px 500px -40px;color:red;font-size:22px;"> @ViewBag.message </h1>
+    <div class="divorg">
+        @using (Html.BeginForm("updateinfo", "publishfan"))
+        {
+            <table id="tabprofileinfo">
+                <tr>
+                    <td><label class="txt">Yor Name : </label></td>
+                    <td class="infodetails"><input name="name" value="@name" style="" type="text" /></td>
+                    <td><label class="txt">Your lastname :</label></td>
+                    <td class="infodetails"><input name="lastname" value="@lastname" style="" type="text" /></td>
+                </tr>
+                <tr>
+                    <td><label class="txt">City :</label> </td>
+                    <td class="infodetails"><input name="city" value="@city" style="" type="text" /></td>
+                </tr>
+                <tr>
+                    <td><label class="txt">Email :</label> </td>
+                    <td class="infodetails"><input name="email" value="@email" style="" type="email" /></td>
+                </tr>
+                <tr>
+                    <td><label class="txt">Phone :</label>  </td>
+                    <td class="infodetails"><input name="tele" value="@tele" style="" type="tel" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input style="font-size:22px;color:white;background-color:blue;width:220px;" value="Save" type="submit" style="font-size:22px;color:white;background-color:blue">
+                    </td>
+
+                </tr>
+
+            </table>
+        }
+        <br /><br /><br />
+        <label style="margin:20px 200px 10px;color:blue;font-size:28px;width:200px"><strong>Change your password</strong></label>
+        @using (Html.BeginForm("updatepassword", "publishfan"))
+        {
+            <table id="tabpass">
+                <tr>
+                    <td><label class="txt">Password</label></td>
+                    <td>
+                        <input dirname="oldpassword" placeholder="Enter your Old password" style="" type="password" />
+                    </td>
+                    <td></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input name="newpass" placeholder="New password" style="" type="password" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="pass" placeholder="Confirm password" style="" type="password" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input style="font-size:22px;color:white;background-color:blue;width:220px;" value="Save" type="submit" style="font-size:22px;color:white;background-color:blue">
+                    </td>
+
+                </tr>
+
+            </table>
+        }
+    </div>
+    @using (Html.BeginForm("profile", "publishfan"))
+    {
+
+        <button style="margin:-30px 90px 5px;font-size:22px;color:white;background-color:blue;width:220px;height:40px">Cancel</button>
+
+    }
+</body>
+</html>

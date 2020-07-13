@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish-Fan</title>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <style>
+        .divbartop {
+            position: absolute;
+            margin: 20px -10px 10px;
+            width: 1328px;
+            height: 70px;
+            background-color: #5D60AA;
+        }
+
+        #ulbarhome {
+            position: absolute;
+            margin: 15px 770px 10px;
+            list-style: none;
+            font-size: 33px;
+            width: 500px;
+            
+        }
+         #ulbarhome li a {
+                color: #D6D7E1;
+                text-decoration: none;
+            }
+        .navbar {
+            position: absolute;
+            margin: 100px 0px 10px;
+            width: 185px;
+            height: 80%;
+            border: 1px black solid;
+            transition:2s;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+
+
+    </div>
+
+    <!-- This is the header -->
+    <header>
+        <div class="divbartop" style="width:101%;position:fixed;margin-top:-50px">
+
+            <ul id="ulbarhome">
+                <li><a href="http://localhost:50097/publishfan/main">Home</a></li>
+                <li>
+                    @using (Html.BeginForm("Addnew", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Post" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("profile", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Profile" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("logout", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Logout" />
+                    }
+                </li>
+            </ul>
+
+            <a href="http://localhost:50097/publishfan/main" alt="Publish-Fan" class="hometxt"><img class="logo" src=" \images\tecnofanlogo.PNG" /></a>
+
+            @using (Html.BeginForm("filter","publishfan"))
+            {
+                <input type="text" style="display:none" value="Categories" />
+                <input oninput="hideshowbuttonsearch()" id="searchzone" name="key_word" type="search" style="position:absolute;margin:20px 150px 10px;width:500px;height:35px;font-size:18px;" placeholder="  Search.." />
+                <input id="search" type="submit" value="" style="display:none;position:absolute;width:50px;height:35px;margin:20px 650px 10px;background-image:url(../../images/search.PNG);background-repeat:no-repeat;background-size:cover;border:none" />
+            }
+
+        </div>
+    </header>
+    <!-- This is the end of the header -->
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var btn = document.getElementById('search');
+        var zone = document.getElementById('searchzone');
+        function hideshowbuttonsearch() {
+            var a = zone.value;
+            if (a.length > 0) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

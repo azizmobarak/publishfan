@@ -1,0 +1,281 @@
+﻿<!--Copy Right  Aziz Mobarak 2019-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/profile.css" />
+    <title>Profile</title>
+    @{
+        System.Data.DataTable dt = (System.Data.DataTable)ViewData["user"];
+
+        string nom = dt.Rows[0][0].ToString() + " " + dt.Rows[0][1].ToString();
+        string email = dt.Rows[0][2].ToString();
+        string age = dt.Rows[0][3].ToString();
+        string gender = dt.Rows[0][4].ToString();
+
+        string bio = dt.Rows[0][5].ToString();
+        string city = dt.Rows[0][6].ToString();
+        string photo = dt.Rows[0][7].ToString();
+        string cover = dt.Rows[0][8].ToString();
+
+        if (photo == null || photo == "")
+        {
+            photo = "~/ images / profile.png";
+        }
+        if (cover == null || cover == "")
+        {
+            cover = "~/images/cover.png";
+        }
+
+        System.Data.DataTable posts = new System.Data.DataTable();
+        posts = (System.Data.DataTable)ViewData["posts"];
+
+        publishfan.Models.Reactions r = new publishfan.Models.Reactions();
+        publishfan.Models.usersprofiles us = new publishfan.Models.usersprofiles();
+
+
+    }
+
+    <style>
+        .divbartop {
+            position: absolute;
+            margin: -10px -10px 10px;
+            width: 1328px;
+            height: 70px;
+            background-color: #5D60AA;
+        }
+
+        #ulbarhome {
+            position: absolute;
+            margin: 15px 770px 10px;
+            list-style: none;
+            font-size: 33px;
+            width: 500px;
+        }
+
+            #ulbarhome li {
+                border-spacing: 6px;
+                float: left;
+                width: 120px;
+                height: 50px;
+                line-height: 40px;
+                text-align: center;
+            }
+
+        .hometxt {
+            position: absolute;
+            margin: 6px 10px 10px;
+            font-size: 36px;
+            color: #D6D7E1;
+            text-decoration: none;
+        }
+
+        .logo {
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-right-radius: 50px;
+            width: 60px;
+            height: 60px;
+        }
+
+        #ulbarhome li a {
+            color: #D6D7E1;
+            text-decoration: none;
+        }
+
+        #bio, #bioshow {
+            position: absolute;
+            margin: 420px 300px 10px;
+            background-color: snow;
+            width: 700px;
+            height: 100px;
+        }
+
+        #btnedite {
+            position: absolute;
+            margin: 75px 630px 10px;
+            background-color: white;
+            border: 1px groove;
+            width: 60px;
+        }
+
+        #uploaddiv {
+            position: fixed;
+            margin: -10px -10px 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #CEC1C1;
+            opacity: .7;
+            display: none;
+        }
+
+        .uploaddiv1 {
+            position: fixed;
+            margin: 200px 400px 10px;
+            width: 500px;
+            height: 400px;
+            background-color: white;
+            display: none;
+        }
+
+        #uploaddivpro {
+            position: fixed;
+            margin: -10px -10px 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #CEC1C1;
+            opacity: .7;
+            display: none;
+        }
+
+        .uploaddivpro1 {
+            position: fixed;
+            margin: 200px 400px 10px;
+            width: 500px;
+            height: 400px;
+            background-color: white;
+            display: none;
+        }
+    </style>
+</head>
+<body style="background-color:lightgray;">
+
+    <!--This is cover image-->
+    <img id="cover" src="@cover" />
+    @using (Html.BeginForm("ifollow", "publishfan"))
+    {
+        <input value="@dt.Rows[0][9].ToString()" style="display:none" name="id" />
+        <button type="submit" style="position:absolute;margin:300px 30px 10px;border:none;background-color:blue;color:white;font-size:28px;width:200px"><strong>@ViewBag.follow</strong></button>
+    }
+    <!--profile image-->
+
+    <img onmouseover="showcamera()" onmouseout="hidecamera()" id="profile" src="@photo" />
+    <!--Bio zone here-->
+    <div id="bioshow" style="margin-left:400px">
+        <label style="position:absolute;margin:10px 350px 10px;color:blue;font-size:22px;">Bio</label>
+        <p style="position:absolute;margin:40px 60px 10px;width:530px;">@bio</p>
+    </div>
+    <!--Left contact div-->
+    <nav>
+        <div class="divleft" style="height:350px;margin-left:50px;margin-top:400px;">
+            <table id="tabprofileinfo">
+                <tr>
+                    <td><img class="poicturetool" src="~/images/profile.png" /> </td>
+
+                    <td class="infodetails">@nom </td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/profile.png" /> </td>
+
+                    <td class="infodetails"> @age  years</td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/profile.png" /> </td>
+
+                    <td class="infodetails">@gender</td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/location.png" /> </td>
+                    <td class="infodetails">@city</td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/maillogo.png" /> </td>
+                    <td class="infodetails">@email</td>
+                </tr>
+
+                <tr>
+                    <td>Interests : </td>
+                    @{ string s = ViewBag.interests; if (s.Length < 30) { s = s + s + s; } }
+                    <td class="infodetails"><label style="width:300px">@s.Substring(0, 30); ..</label></td>
+                </tr>
+
+            </table>
+            <hr class="hr" />
+        </div>
+    </nav>
+    <section>
+
+        <!--Prifile posts-->
+        <table class="maindiv" style="margin-left:400px;">
+            @foreach (System.Data.DataRow dr in posts.Rows)
+            {
+                <tr>
+                    <td>
+                        <hr />
+                        <img id="profilepost" src="@photo" />
+                        <p id="text">@dr[0].ToString()</p>
+                        <table id="reaction">
+                            <tr>
+                                <td>@r.getforarticle(int.Parse(dr[1].ToString())).Rows[0][0].ToString()</td>
+                                <td>@r.getforarticle(int.Parse(dr[1].ToString())).Rows[0][1].ToString()</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @using (Html.BeginForm("voteupprofile", "publishfan"))
+                                    {
+                                        <input style="display:none" type="text" value="@dr[1].ToString()" name="id_article" />
+                                        <button type="submit" class="btnreaction"><img src="~/images/up.png" style="width:30px; height:20px;" /></button>
+                                    }
+                                </td>
+                                <td>
+                                    @using (Html.BeginForm("votedownprofile", "publishfan"))
+                                    {
+                                        <input style="display:none" type="text" value="@dr[1].ToString()" name="id_article" />
+                                        <button type="submit" class="btnreaction"><img src="~/images/down.png" style="width:30px; height:20px;" /></button>
+                                    }
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+            }
+        </table>
+
+
+    </section>
+
+
+    <header>
+        <div class="divbartop" style="position:fixed;width:103%">
+
+            <ul id="ulbarhome">
+                <li><a href="http://localhost:50097/publishfan/main">Home</a></li>
+                <li>
+                    @using (Html.BeginForm("Addnew", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Post" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("profile", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Profile" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("logout", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Logout" />
+                    }
+                </li>
+            </ul>
+
+            <a href="http://localhost:50097/publishfan/main" alt="Publish-Fan" class="hometxt"><img class="logo" src=" \images\tecnofanlogo.PNG" /></a>
+            <label id="profilename">@nom</label>
+
+            @using (Html.BeginForm("filter", "publishfan"))
+            {
+                <input oninput="hideshowbuttonsearch()" id="searchzone" name="key_word" type="search" style="position:absolute;margin:20px 370px 10px;width:300px;height:35px;font-size:18px;" placeholder="  Search.." />
+                <input id="search" type="submit" value="" style="display:none;position:absolute;width:50px;height:35px;margin:20px 670px 10px;background-image:url(../../images/search.PNG);background-repeat:no-repeat;background-size:cover;border:none" />
+            }
+
+        </div>
+    </header>
+
+
+</body>
+</html>
+

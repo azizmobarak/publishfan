@@ -1,0 +1,3 @@
+Choices 
+1)-Execute the two files query on sqlserver management studio to create database , change the database name on Webconfig xml file at the element "connectionstring" with the new name and location of your database.
+2)-extrat the file App_Data and place it inside the project folder and link the database by changing the location in the Webconfig xml file at the element "connectionstring" with the new name and location of your database.

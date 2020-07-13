@@ -1,0 +1,35 @@
+﻿
+@{
+    // Copy Right  Aziz Mobarak 2019
+
+    Layout = "~/Views/Shared/_Viewaccount.cshtml";
+    ViewBag.Title = "Login";
+}
+
+<div id="loginpanel">
+    <h1 style="margin-left:310px;color:#1A0B68;font-family:Cambria" class="titlepage"><strong>Login to your Account</strong></h1>
+    <br /><br />
+    <p style="background-color:white;position:absolute;font-size:22px;color:red;font-style:oblique;margin:120px 300px 10px;">@ViewBag.errormessage</p>
+
+    @using (Html.BeginForm("Access_to_main", "Account"))
+    {
+        <table id="tablogin" style="position:absolute; margin:200px 300px 10px;background-color:#00046B;opacity:.7;">
+            <tr>
+                <td><input type="email" calss="inp" name="email" placeholder=" Email.." style="width:440px;height: 30px;margin: 20px 10px 10px;font-size:20px" /></td>
+            </tr>
+            <tr>
+                <td><input type="password" class="inp" name="password" placeholder=" PassWord.." style="width:440px;height: 30px;margin: 20px 10px 10px;font-size:20px" /></td>
+            </tr>
+            <tr>
+                <td><input style="font-size:22px;background-color:#016308;width:200px;height:35px;margin:10px 130px 10px;color:white" id="btnlogin" type="submit" value="Login" /></td>
+            </tr>
+
+        </table>
+    }
+    @using (Html.BeginForm("toregister","Account"))
+    {
+        <p style="position:absolute;margin:420px 350px 20px;">You don't have an account Create one <button style="border:none;background-color:white;color:#016308;font-size:18px;">Here</button> </p>
+
+    }
+</div>
+

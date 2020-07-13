@@ -1,0 +1,219 @@
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\publishfan.dll.config
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\publishfan.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\publishfan.pdb
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\csc.exe
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\csc.exe.config
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\csc.rsp
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\csi.exe
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\csi.exe.config
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\csi.rsp
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.AppContext.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Console.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.IO.Compression.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.IO.Pipes.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Security.Claims.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.ValueTuple.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Xml.XPath.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\vbc.exe
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\vbc.exe.config
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\vbc.rsp
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\VBCSCompiler.exe
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\EntityFramework.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\EntityFramework.SqlServer.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Helpers.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Mvc.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Razor.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Webpages.Deployment.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Webpages.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Webpages.Razor.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\EntityFramework.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\EntityFramework.SqlServer.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Razor.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Webpages.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Webpages.Deployment.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Webpages.Razor.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Helpers.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\System.Web.Mvc.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\obj\Debug\publishfan.csproj.CoreCompileInputs.cache
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\obj\Debug\publishfan.csproj.CopyComplete
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\obj\Debug\publishfan.dll
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\obj\Debug\publishfan.pdb
+C:\Users\AzizMobarak\source\repos\publishfan\publishfan\obj\Debug\publishfan.csprojAssemblyReference.cache
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\obj\Debug\publishfan.csproj.CoreCompileInputs.cache
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\publishfan.dll.config
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\publishfan.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\publishfan.pdb
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\csc.exe
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\csc.exe.config
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\csc.rsp
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\csi.exe
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\csi.exe.config
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\csi.rsp
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.Managed.Core.targets
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.AppContext.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Collections.Immutable.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Console.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.IO.Compression.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.IO.FileSystem.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.IO.Pipes.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Reflection.Metadata.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Security.AccessControl.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Security.Claims.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Security.Principal.Windows.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.ValueTuple.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Xml.XmlDocument.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Xml.XPath.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\vbc.exe
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\vbc.exe.config
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\vbc.rsp
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\VBCSCompiler.exe
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\roslyn\VBCSCompiler.exe.config
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\EntityFramework.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\EntityFramework.SqlServer.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\Microsoft.Web.Infrastructure.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Helpers.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Mvc.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Razor.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Webpages.Deployment.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Webpages.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Webpages.Razor.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\EntityFramework.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\EntityFramework.SqlServer.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Razor.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Webpages.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Webpages.Deployment.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Webpages.Razor.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Helpers.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\System.Web.Mvc.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\obj\Debug\publishfan.csproj.CopyComplete
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\obj\Debug\publishfan.dll
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\obj\Debug\publishfan.pdb
+D:\projects programs\Visual2017\web asp\publishfan\publishfan\obj\Debug\publishfan.csprojAssemblyReference.cache
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\publishfan.dll.config
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\publishfan.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\publishfan.pdb
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\csc.exe
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\csc.exe.config
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\csc.rsp
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\csi.exe
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\csi.exe.config
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\csi.rsp
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.Managed.Core.targets
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.AppContext.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Collections.Immutable.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Console.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.IO.Compression.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.IO.FileSystem.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.IO.Pipes.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Reflection.Metadata.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Security.AccessControl.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Security.Claims.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Security.Principal.Windows.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.ValueTuple.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Xml.XmlDocument.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Xml.XPath.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\vbc.exe
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\vbc.exe.config
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\vbc.rsp
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\VBCSCompiler.exe
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\roslyn\VBCSCompiler.exe.config
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\EntityFramework.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\EntityFramework.SqlServer.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\Microsoft.Web.Infrastructure.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Helpers.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Mvc.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Razor.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Webpages.Deployment.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Webpages.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Webpages.Razor.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\EntityFramework.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\EntityFramework.SqlServer.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Razor.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Webpages.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Webpages.Deployment.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Webpages.Razor.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Helpers.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\System.Web.Mvc.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\obj\Debug\publishfan.csprojAssemblyReference.cache
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\obj\Debug\publishfan.csproj.CoreCompileInputs.cache
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\obj\Debug\publishfan.csproj.CopyComplete
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\obj\Debug\publishfan.dll
+D:\projects programs\Visual studio\web asp\publishfan\publishfan\obj\Debug\publishfan.pdb

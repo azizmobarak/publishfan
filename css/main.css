@@ -1,0 +1,175 @@
+﻿.body {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+/* the style of the header div*/
+
+
+
+#ulbarhome li {
+    border-spacing: 6px;
+    float: left;
+    width: 120px;
+    height: 50px;
+    line-height: 40px;
+    text-align: center;
+}
+.hometxt {
+    position: absolute;
+    margin: 6px 10px 10px;
+    font-size: 36px;
+    color: #D6D7E1;
+    text-decoration: none;
+}
+
+.logo {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    width: 60px;
+    height: 60px;
+}
+
+#searchtop {
+    position: absolute;
+    margin: 20px 230px 10px;
+    width: 300px;
+    height: 35px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: 0px;
+    font-size: 22px;
+}
+
+#btnsearch {
+    position: absolute;
+    margin: 20px 540px 10px;
+    width: 40px;
+    height: 35px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 80px;
+    border: 0px;
+}
+
+
+
+/* the style of left nav bar start here*/
+
+
+.categories {
+    position: absolute;
+    margin: 20px 20px 10px;
+}
+
+#choices {
+    position: absolute;
+    margin: 50px 10px 10px;
+    width: 170px;
+    font-size: 22px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+#filtertable {
+    position: absolute;
+    margin: 120px 20px 20px;
+    font-size: 22px;
+    width: 200px;
+}
+
+    #filtertable tr td {
+        width: 300px;
+    }
+
+#new, #last_week, #last_month, #last_year, #random {
+}
+
+#filter {
+    margin: 330px 20px 10px;
+    width: 140px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #7E99E1;
+}
+
+
+/* The style of the main page */
+
+#divmain {
+    position: absolute;
+    margin: 100px 230px 10px;
+    border: 0px solid black;
+    width: 1020px;
+    height: 80%;
+}
+
+#tablemain {
+    position: absolute;
+    margin: 5px 5px 10px;
+    width: 1010px;
+    height: 80%;
+}
+
+    #tablemain tr td {
+        border: 1px solid black;
+        width: 30%;
+        height: 200px;
+    }
+
+.h2_table {
+    position: absolute;
+    margin: -70px 200px 10px;
+    color: brown;
+    width: 150px;
+    font-size: 36px;
+}
+
+.p_table {
+    position: absolute;
+    margin: 3px 100px 5px;
+    width: 500px;
+    font-size: 22px;
+}
+
+#ad_top {
+    width: 100%;
+    height: 100%;
+    border: 1px red solid;
+}
+/*Footer*/
+.footer {
+    position: absolute;
+}
+/*style color-profile thead footer*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

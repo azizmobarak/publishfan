@@ -1,0 +1,492 @@
+﻿<!--Copy Right  Aziz Mobarak 2019-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/profile.css" />
+    <title>Profile</title>
+    @{
+        System.Data.DataTable dt = (System.Data.DataTable)ViewData["user"];
+
+        string nom = dt.Rows[0][0].ToString() + " " + dt.Rows[0][1].ToString();
+        string email = dt.Rows[0][2].ToString();
+        string age = dt.Rows[0][3].ToString();
+        string gender = dt.Rows[0][4].ToString();
+        string tele = dt.Rows[0][5].ToString();
+        string bio = dt.Rows[0][6].ToString();
+        string city = dt.Rows[0][7].ToString();
+        string photo = dt.Rows[0][8].ToString();
+        string cover = dt.Rows[0][9].ToString();
+
+        if (photo == null || photo == "")
+        {
+            photo = "~/ images / profile.png";
+        }
+        if (cover == null || cover == "")
+        {
+            cover = "~/images/cover.png";
+        }
+
+        System.Data.DataTable posts = new System.Data.DataTable();
+        posts = (System.Data.DataTable)ViewData["posts"];
+
+        publishfan.Models.Reactions r = new publishfan.Models.Reactions();
+        System.Data.DataTable calculvote = new System.Data.DataTable();
+
+        string IDD = dt.Rows[0][10].ToString();
+        calculvote = r.get(IDD);
+        int up = 0;
+        int down = 0;
+        foreach (System.Data.DataRow dr in calculvote.Rows)
+        {
+            try
+            {
+                up = up + int.Parse(dr[0].ToString());
+                down = down + int.Parse(dr[1].ToString());
+            }
+            catch
+            {
+                up = 0;
+                down = 0;
+            }
+
+
+        }
+
+    }
+
+    <style>
+        .divbartop {
+            position: absolute;
+            margin: -10px -10px 10px;
+            width: 1328px;
+            height: 70px;
+            background-color: #5D60AA;
+        }
+
+        #ulbarhome {
+            position: absolute;
+            margin: 15px 770px 10px;
+            list-style: none;
+            font-size: 33px;
+            width: 500px;
+        }
+
+            #ulbarhome li {
+                border-spacing: 6px;
+                float: left;
+                width: 120px;
+                height: 50px;
+                line-height: 40px;
+                text-align: center;
+            }
+
+        .hometxt {
+            position: absolute;
+            margin: 6px 10px 10px;
+            font-size: 36px;
+            color: #D6D7E1;
+            text-decoration: none;
+        }
+
+        .logo {
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-right-radius: 50px;
+            width: 60px;
+            height: 60px;
+        }
+
+        #ulbarhome li a {
+            color: #D6D7E1;
+            text-decoration: none;
+        }
+
+        #bio, #bioshow {
+            position: absolute;
+            margin: 420px 300px 10px;
+            background-color: snow;
+            width: 700px;
+            height: 100px;
+        }
+
+        #btnedite {
+            position: absolute;
+            margin: 75px 630px 10px;
+            background-color: white;
+            border: 1px groove;
+            width: 60px;
+        }
+
+        #uploaddiv {
+            position: fixed;
+            margin: -10px -10px 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #CEC1C1;
+            opacity: .7;
+            display: none;
+        }
+
+        .uploaddiv1 {
+            position: fixed;
+            margin: 200px 400px 10px;
+            width: 500px;
+            height: 400px;
+            background-color: white;
+            display: none;
+        }
+
+        #articleedite {
+            position: fixed;
+            margin: 60px 300px 10px;
+            width: 700px;
+            height: 700px;
+            background-color: white;
+            display: none;
+        }
+
+        .uploaddiv11 {
+            position: fixed;
+            margin: 200px 400px 10px;
+            width: 500px;
+            height: 400px;
+            background-color: white;
+            display: none;
+        }
+
+        #uploaddivpro {
+            position: fixed;
+            margin: -10px -10px 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #CEC1C1;
+            opacity: .7;
+            display: none;
+        }
+
+        #texthide {
+            margin: 5px 10px 4px;
+            border: none;
+            background-color: white;
+            width: 650px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body style="background-color:lightgray;">
+
+    <!--This is cover image-->
+    <img id="cover" onmouseout="document.getElementById('covercamera').style.display = 'none'" onmouseover="document.getElementById('covercamera').style.display = 'block';" src="@cover" />
+    <img onclick="showuploadcoverdiv()" id="covercamera" src="~/images/camera.jpg" onmouseover="document.getElementById('covercamera').style.display = 'block';">
+
+
+    <!--profile image-->
+
+    <img onmouseover="showcamera()" onmouseout="hidecamera()" id="profile" src="@photo" />
+    <img onclick="showuploadprofilediv()" onmouseover="showcamera()" src="~/images/camera.jpg" id="camera" />
+    <!--Bio zone here-->
+    <div id="bio">
+        @using (Html.BeginForm("bio", "publishfan"))
+        {
+            <textarea name="bio" id="biotext"></textarea>
+            <input id="updatebio" type="submit" value="Save" />
+        }
+    </div>
+    <div id="bioshow">
+        <label style="position:absolute;margin:10px 350px 10px;color:blue;font-size:22px;">Bio</label>
+        <p style="position:absolute;margin:40px 60px 10px;width:530px;">@bio</p>
+        <button id="btnedite" onclick="editbio()">Edit</button>
+    </div>
+    <!--Left contact div-->
+    <nav>
+        <div class="divleft" style="height:370px">
+            <table id="tabprofileinfo">
+                <tr>
+                    <td><img class="poicturetool" src="~/images/profile.png" /> </td>
+
+                    <td class="infodetails">@nom</td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/location.png" /> </td>
+                    <td class="infodetails">@city</td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/maillogo.png" /></td>
+                    <td class="infodetails">@email</td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/tele.png" /> </td>
+                    <td class="infodetails">@tele</td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/location.png" />(Now) </td>
+                    <td class="infodetails">@city</td>
+                </tr>
+                <tr>
+                    <td>Interests : </td>
+                    @{ string s = ViewBag.interests; if (s.Length < 30) { s = s + s + s; } }
+                    <td class="infodetails"><label style="width:300px">@s.Substring(0, 30); ..</label></td>
+                </tr>
+                <tr>
+                    <td><img class="poicturetool" src="~/images/password.png" /> </td>
+                    <td class="infodetails">***********   <button style="background-color:blue;font-size:20px;"><a href="http://localhost:50097/publishfan/edite" style="text-decoration:none;color:white;">Edit</a></button></td>
+                </tr>
+
+            </table>
+            <hr class="hr" />
+        </div>
+    </nav>
+    <section>
+
+        <!--Prifile posts-->
+        <table id="tableposts" class="maindiv">
+            @{int b = 0; }
+            @foreach (System.Data.DataRow dr in posts.Rows)
+            {
+                <tr>
+                    <td>
+                        <hr />
+                        <div id="origintext">
+                            <img id="profilepost" src="@photo" />
+                            <button onclick="showedittext()" style="position:absolute;margin:40px 620px 10px;border:1px solid skyblue;background-color:white;">Edite</button>
+                            <p disabled="disabled" class="areaediteclass" id="text">@dr[0].ToString()</p>
+                        </div>
+
+                        <!--start edit here-->
+
+                        <div id="edittext" style="display:none">
+                            @using (Html.BeginForm("updatetext", "publishfan"))
+                            {
+                                <input name="idarticle" style="display:none;" value="@dr[1].ToString()" />
+                                <textarea name="text" class="areaediteclass" id="texthide">@dr[0].ToString()</textarea>
+                                <div style="margin-left:520px;margin-top:10px;">
+                                    <button type="submit" style="background-color:blue;color:white;font-size:20px">Save</button>
+
+                                    <button type="button" onclick="showorigintext()" style="background-color:blue;color:white;font-size:20px">Cancel</button>
+                                </div>
+                            }
+                        </div>
+
+                        <table id="reaction">
+                            <tr>
+                                <td>@r.getforarticle(int.Parse(dr[1].ToString())).Rows[0][0].ToString()</td>
+                                <td>@r.getforarticle(int.Parse(dr[1].ToString())).Rows[0][1].ToString()</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @using (Html.BeginForm("voteupprofile", "publishfan"))
+                                    {
+                                        <input style="display:none" type="text" value="@dr[1].ToString()" name="id_article" />
+                                        <button type="submit" class="btnreaction"><img src="~/images/up.png" style="width:30px; height:20px;" /></button>
+                                    }
+                                </td>
+                                <td>
+                                    @using (Html.BeginForm("votedownprofile", "publishfan"))
+                                    {
+                                        <input style="display:none" type="text" value="@dr[1].ToString()" name="id_article" />
+                                        <button type="submit" class="btnreaction"><img src="~/images/down.png" style="width:30px; height:20px;" /></button>
+                                    }
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+                b++;
+            }
+        </table>
+
+        <div class="divright" style="height:300px;width:300px;">
+
+            <table style="margin-left:10px;margin-top:20px;width:220px;">
+                <tr>
+                    <td><img src="~/images/up.png" style="width:30px;height:30px;" /></td>
+                    <td>@up (*2)</td>
+                </tr>
+                <tr>
+                    <td><img src="~/images/down.png" style="width:30px;height:30px;" /></td>
+                    <td>@down  (*1)</td>
+                </tr>
+                <tr>
+                    <td><label style="color:darkgreen;font-size:16px;">Total Reactions : </label></td>
+                    <td> @r.numberreact(Session["user_id"].ToString()).ToString()</td>
+                </tr>
+                <tr>
+                    <td><label style="color:darkgreen;font-size:16px;">Total Comments :</label></td>
+                    <td> @r.numbercomment(nom, photo).ToString() (+1)</td>
+
+                </tr>
+
+                @{ int tot = (up * 2) - down + r.numbercomment(nom, photo); }
+                <tr>
+                    <td><label style="color:darkblue;font-size:22px;">Total points :</label></td>
+                    <td>@tot</td>
+                </tr>
+
+            </table>
+            <button style="margin:50px 50px 5px;border:none;color:white;background-color:darkblue;font-size:20px;width:200px;" type="button">Payment</button>
+
+        </div>
+
+    </section>
+
+
+    <header>
+        <div class="divbartop" style="position:fixed;width:103%">
+
+            <ul id="ulbarhome">
+                <li><a href="http://localhost:50097/publishfan/main">Home</a></li>
+                <li>
+                    @using (Html.BeginForm("Addnew", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Post" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("profile", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Profile" />
+                    }
+                </li>
+                <li>
+                    @using (Html.BeginForm("logout", "publishfan"))
+                    {
+                        <input style="background-color:#5D60AA;border:none;color:#D6D7E1;font-size:28px;margin-left:-10px;" type="submit" value="Logout" />
+                    }
+                </li>
+            </ul>
+
+            <a href="http://localhost:50097/publishfan/main" alt="Publish-Fan" class="hometxt"><img class="logo" src=" \images\tecnofanlogo.PNG" /></a>
+            <label id="profilename">@nom</label>
+
+            @using (Html.BeginForm("filter", "publishfan"))
+            {
+                <input type="text" style="display:none" value="Categories" />
+                <input oninput="hideshowbuttonsearch()" id="searchzone" name="key_word" type="search" style="position:absolute;margin:20px 370px 10px;width:300px;height:35px;font-size:18px;" placeholder="  Search.." />
+                <input id="search" type="submit" value="" style="display:none;position:absolute;width:50px;height:35px;margin:20px 670px 10px;background-image:url(../../images/search.PNG);background-repeat:no-repeat;background-size:cover;border:none" />
+            }
+
+        </div>
+    </header>
+    @*Upload cover div*@
+    <div id="uploaddiv">
+    </div>
+    <div id="uploaddiv1" class="uploaddiv1">
+        <label style="margin:10px 120px 0px;font-size:24px;color:blue;width:500px">Upload your cover photo</label>
+        <div id="showcover" style="width:370px ;height:200px;margin:30px 60px 0px;background-color:aqua;border:1px solid;background-image:url('@cover');background-size:100% 100%;background-repeat:no-repeat;"></div>
+        <button onclick="cancel()" style="margin:104px 2px 10px;position:absolute;width:100px;background-color:blue;border:none;color:white;font-size:26px;">Cancel</button>
+
+        @using (Html.BeginForm("savecover", "publishfan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input name="filecover" id="coverfile" style="position:absolute;margin:60px 160px 10px;" type="file" value="Upload Cover Photo" />
+            <input type="submit" value="save" style="margin:104px 398px 10px;position:absolute;width:100px;background-color:blue;border:none;color:white;font-size:26px;" />
+        }
+    </div>
+    <!--End of upload cover-->
+    @*Upload photo div*@
+    <div id="uploaddivpro">
+    </div>
+    <div id="uploaddivpro1" class="uploaddiv1">
+        <label style="margin:10px 120px 0px;font-size:24px;color:blue;width:500px">Upload your profile photo</label>
+        <div id="showcover" style="width:370px ;height:200px;margin:30px 60px 0px;background-color:aqua;border:1px solid;background-image:url('@photo');background-size:100% 100%;background-repeat:no-repeat;"></div>
+        <button onclick="cancel()" style="margin:104px 2px 10px;position:absolute;width:100px;background-color:blue;border:none;color:white;font-size:26px;">Cancel</button>
+
+        @using (Html.BeginForm("saveprofile", "publishfan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input name="file" id="photofile" style="position:absolute;margin:60px 160px 10px;" type="file" value="Upload Cover Photo" />
+            <input type="submit" value="save" style="margin:104px 398px 10px;position:absolute;width:100px;background-color:blue;border:none;color:white;font-size:26px;" />
+        }
+    </div>
+    <!--End of upload photo-->
+    @*edite post*@
+    <div id="articleedite" class="uploaddiv11">
+        <label style="position:absolute;margin:10px 210px 0px;font-size:24px;color:blue;width:500px">Update or Delete thi post</label>
+        <button onclick="cancel()" style="margin:10px 590px 10px;position:absolute;width:100px;background-color:blue;border:none;color:white;font-size:26px;">Cancel</button>
+
+        @using (Html.BeginForm("saveprofile", "publishfan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <textarea id="textpostupdate" style="position:absolute;margin:60px 17px 10px;position:absolute;width:660px;height:450px;">
+ 
+           </textarea>
+            <input type="submit" value="save" style="margin:520px 490px 10px;position:absolute;width:200px;background-color:blue;border:none;color:white;font-size:26px;" />
+            <input type="submit" value="delete" style="margin:520px 10px 10px;position:absolute;width:200px;background-color:blue;border:none;color:white;font-size:26px;" />
+
+        }
+    </div>
+    @*End of editing post->*@
+
+
+    <script type="text/javascript">
+        function showcamera() {
+            document.getElementById('camera').style.display = "block";
+            document.getElementById('cameraupdate').style.display = "block";
+        }
+        function hidecamera() {
+            document.getElementById('camera').style.display = "none";
+            document.getElementById('cameraupdate').style.display = "none";
+        }
+
+        function editbio() {
+            document.getElementById('bioshow').style.display = "none";
+        }
+
+        //function to show cover upload
+        function showuploadcoverdiv() {
+            document.getElementById('uploaddiv').style.display = "block";
+            document.getElementById('uploaddiv1').style.display = "block";
+        }
+
+        //function to show profile upload
+        function showuploadprofilediv() {
+            document.getElementById('uploaddivpro').style.display = "block";
+            document.getElementById('uploaddivpro1').style.display = "block";
+        }
+        function showuploadprofilediv1(num) {
+            document.getElementById('uploaddivpro').style.display = "block";
+            document.getElementById('articleedite').style.display = "block";
+            putintoarea(num);
+        }
+        //cancel downloading profile/cover
+        function cancel() {
+            document.getElementById('uploaddiv').style.display = "none";
+            document.getElementById('uploaddiv1').style.display = "none";
+            document.getElementById('uploaddiv11').style.display = "none";
+            document.getElementById('uploaddivpro').style.display = "none";
+            document.getElementById('articleedite').style.display = "none";
+
+        }
+
+
+        ////for the btn search show and hide
+        var btn = document.getElementById('search');
+        var zone = document.getElementById('searchzone');
+        function hideshowbuttonsearch() {
+            var a = zone.value;
+            if (a.length > 0) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        //put text into area
+        var original = document.getElementById('origintext');
+        var newest = document.getElementById('edittext');
+
+        function showedittext() {
+            original.style.display = 'none';
+            newest.style.display = 'block';
+        }
+        function showorigintext() {
+            original.style.display = 'block';
+            newest.style.display = 'none';
+        }
+
+        //Ajax for text
+    </script>
+</body>
+</html>
+
